@@ -4,7 +4,7 @@ head
 	link(href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css')
 	link(href="css/style.css" rel="stylesheet" type="text/css")
 html
-	body
+	body.modal
 		header#main-header
 			.wrapper
 				a(href="/")
@@ -48,23 +48,15 @@ html
 								i.fa.fa-star-o
 						h2 Midterm 1 Study Guide
 					.controls
-
+						a(href="#").control-btn.fill(style="margin-left: 0")
+							i.fa.fa-line-chart 
+							span STUDY
 						a(href="#").control-btn.blue.edit-mode
-							.icon
-								i.fa.fa-edit 
-								span EDIT
-						a(href="#").control-btn.blue.long(style="margin-left: 0")
-							.icon
-								i.fa.fa-line-chart 
-								span STUDY
+							i.fa.fa-edit 
+							span EDIT
 						a(href="#").control-btn.blue
-							.icon
-								i.fa.fa-share 
-								span SHARE
-						//- a(href="#").control-btn.blue.red-hover
-						//- 	.icon
-						//- 		i.fa.fa-trash
-						//- 	span DELETE
+							i.fa.fa-share 
+							span SHARE
 				div.flashcard-container
 					.flashcard.cf
 						.col.col-left
@@ -183,17 +175,14 @@ html
 						form 
 							input(placeholder="Enter deck title" value="Midterm 1 Study Guide")
 					.controls
-						a(href="#").control-btn.blue.long(style="margin-left: 0")
-							.icon
-								i.fa.fa-check
+						a(href="#").control-btn.fill(style="margin-left: 0")
+							i.fa.fa-check
 							span SAVE
-						a(href="#").control-btn.blue.edit-mode
-							.icon
-								i.fa.fa-close
+						a(href="#").control-btn.edit-mode
+							i.fa.fa-close
 							span CANCEL
-						a(href="#").control-btn.blue.red-hover
-							.icon
-								i.fa.fa-trash
+						a(href="#").control-btn.red
+							i.fa.fa-trash
 							span DELETE
 					a#top-card.blue-btn.new-card(href="")
 						i.fa.fa-plus
@@ -340,18 +329,14 @@ html
 						i.fa.fa-plus
 						span  New Card
 					.controls
-						a(href="#").control-btn.blue.long(style="margin-left: 0")
-							.icon
-								i.fa.fa-check
+						a(href="#").control-btn.fill(style="margin-left: 0")
+							i.fa.fa-check
 							span SAVE
-						a(href="#").control-btn.blue.edit-mode
-							.icon
-								i.fa.fa-close
+						a(href="#").control-btn.edit-mode
+							i.fa.fa-close
 							span CANCEL
-						a(href="#").control-btn.blue.red-hover
-							.icon
-								i.fa.fa-trash
+						a(href="#").control-btn.red
+							i.fa.fa-trash
 							span DELETE
-					
 		script(src="js/jquery-2.1.1.min.js")
 		script(src="js/main.js")
