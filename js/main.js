@@ -50,4 +50,12 @@ $(document).ready(function() {
 		allowClose();	
 	});
 
+
+	// Flip flashcards on click
+	var flipButton = $('.flip-button');
+
+	flipButton.click(function() {
+		var card = $(this).siblings('.card').toggleClass('flipped');
+	});
+
 });
