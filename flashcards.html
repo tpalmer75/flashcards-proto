@@ -12,7 +12,7 @@
         <div id="account"><a href="" class="user"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"><span>Jim Johnson</span></a><a href="" class="logout"><span>Log Out </span><i class="fa fa-sign-out"></i></a></div>
       </div>
     </header>
-    <section class="study">
+    <section style="min-height: 100vh" class="study">
       <div class="wrapper">
         <header class="cf">
           <div class="deck-info">
@@ -22,7 +22,7 @@
           </div>
         </header>
         <div class="card-container">
-          <div class="card">
+          <div class="card card-1 current">
             <div class="front">
               <div class="content">
                 <p>Lorem Ipsum</p>
@@ -33,11 +33,38 @@
                 <p>Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
               </div>
             </div>
-          </div><a href="#" class="flip-button">Flip</a>
+          </div>
+          <div class="card card-2">
+            <div class="front">
+              <div class="content">
+                <p>Lorem Ipsum</p>
+              </div>
+            </div>
+            <div class="back">
+              <div class="content">
+                <p>Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card card-3">
+            <div class="front">
+              <div class="content">
+                <p>Lorem Ipsum</p>
+              </div>
+            </div>
+            <div class="back">
+              <div class="content">
+                <p>Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="button-container cf"><a href="#" class="correct-button"><i class="fa fa-check"></i><span>Right</span></a><a href="#" class="flip-button"><i class="fa fa-refresh"></i><span>Flip</span></a><a href="#" class="incorrect-button"><i class="fa fa-close"></i><span>Wrong</span></a></div>
+          <p style="text-align: center; color: #555; margin-top: 20px;" class="swipe-message"><i class="fa fa-arrow-left"></i>  Swipe to flip  <i class="fa fa-arrow-right"></i></p>
         </div>
       </div>
     </section>
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/flashCards.js"></script>
   </body>
 </html>

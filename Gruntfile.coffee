@@ -84,15 +84,15 @@ module.exports = (grunt) ->
 					ext: '.css'
 				]
 
-		# autoprefixer:
-		# 	compile:
-		# 		files:[
-		# 			expand: true
-		# 			cwd: 'css/'
-		# 			src: '*.css'
-		# 			dest: 'css/'
-		# 			ext: '.css'
-		# 		]
+		autoprefixer:
+			compile:
+				files:[
+					expand: true
+					cwd: 'css/'
+					src: '*.css'
+					dest: 'css/'
+					ext: '.css'
+				]
 
 		jade:
 			options:
@@ -118,7 +118,7 @@ module.exports = (grunt) ->
 				# tasks: ['jshint', 'uglify', 'livereload']
 			sass:
 				files: ['sass/**/*.sass', 'sass/**/*.scss']
-				tasks: ['sass', 'livereload']
+				tasks: ['sass', 'autoprefixer', 'livereload']
 			jade:
 				files: ['jade/**/*.jade']
 				tasks: ['jade', 'livereload']
@@ -129,7 +129,7 @@ module.exports = (grunt) ->
 	# grunt.loadNpmTasks('grunt-contrib-coffee')
 	grunt.loadNpmTasks('grunt-contrib-uglify')
 	grunt.loadNpmTasks('grunt-contrib-sass')
-	#grunt.loadNpmTasks('grunt-autoprefixer')
+	grunt.loadNpmTasks('grunt-autoprefixer')
 	grunt.loadNpmTasks('grunt-contrib-jade')
 	grunt.loadNpmTasks('grunt-regarde')
 	grunt.loadNpmTasks('grunt-contrib-connect')
@@ -137,5 +137,5 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 
 	# Default task(s).
-	grunt.registerTask('compile', ['sass', 'jade'])
+	grunt.registerTask('compile', ['sass', 'autoprefixer', 'jade'])
 	grunt.registerTask('default', ['compile', 'livereload-start', 'connect', 'regarde'])

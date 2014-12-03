@@ -9,6 +9,7 @@
     "grunt-regarde": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-livereload": "*",
+    "grunt-autoprefixer": "*",
     "coffee-script": "*"
   }
 }

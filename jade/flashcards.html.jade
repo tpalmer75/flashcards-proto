@@ -18,7 +18,7 @@ html
 					a.logout(href="")
 						span Log Out 
 						i.fa.fa-sign-out
-		section.study
+		section.study(style="min-height: 100vh")
 			.wrapper
 				header.cf
 					.deck-info
@@ -29,14 +29,42 @@ html
 									|  Back to deck
 						h2 Midterm 1 Study Guide
 				.card-container
-					.card
+					.card.card-1.current
 						.front
 							.content
 								p Lorem Ipsum
 						.back
 							.content
 								p Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.
-					a.flip-button(href="#") Flip
+					.card.card-2
+						.front
+							.content
+								p Lorem Ipsum
+						.back
+							.content
+								p Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.
+					.card.card-3
+						.front
+							.content
+								p Lorem Ipsum
+						.back
+							.content
+								p Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.
+					.button-container.cf
+						a.correct-button(href="#")
+							i.fa.fa-check
+							span Right
+						a.flip-button(href="#")
+							i.fa.fa-refresh
+							span Flip
+						a.incorrect-button(href="#")
+							i.fa.fa-close
+							span Wrong
+					p.swipe-message(style="text-align: center; color: #555; margin-top: 20px;")
+						i.fa.fa-arrow-left
+						|   Swipe to flip  
+						i.fa.fa-arrow-right
 
 		script(src="js/jquery-2.1.1.min.js")
-		script(src="js/main.js")
+		script(src="js/jquery.touchSwipe.min.js")
+		script(src="js/flashCards.js")

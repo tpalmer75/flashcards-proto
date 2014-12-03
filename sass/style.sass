@@ -19,6 +19,9 @@ body
 p
 	line-height: 24px
 
+a
+	color: $bright-blue
+
 // Recurring Elements ------------------------------------------
 
 .wrapper
@@ -66,6 +69,7 @@ a.blue-btn
 #main-header
 	background: $blue
 	padding: 14px
+	border-bottom: 1px solid #002A53
 
 #logo
 	font-size: 24px
@@ -282,52 +286,26 @@ section.study
 	min-height: 500px
 	margin: auto
 	perspective: 1000
-	-webkit-perspective: 1000
-	-moz-transform: perspective(1000px)
 	.card
 		transition: 0.6s
 		position: relative
 		transform-style: preserve-3d
-		-webkit-transform-style: preserve-3d
-		-moz-transform-style: preserve-3d
-		width: 600px
+		width: 100%
 		height: 500px
+		display: none
+		&.current
+			display: block
 		&.flipped
-			// -webkit-transform: rotateY(180deg)
-			// -moz-transform: rotateY(180deg)
-			// -o-transform: rotateY(180deg)
-			// transform: rotateY(180deg)
 			.back
-				-webkit-transform: rotateY(0deg)
-				-moz-transform: rotateY(0deg)
-				-o-transform: rotateY(0deg)
-				-ms-transform: rotateY(0deg)
 				transform: rotateY(0deg)
 			.front
-				-webkit-transform: rotateY(180deg)
-				-moz-transform: rotateY(180deg)
-				-o-transform: rotateY(180deg)
 				transform: rotateY(180deg)
 	.front, .back
+
 		backface-visibility: hidden
-		-webkit-backface-visibility: hidden
-		-moz-backface-visibility: hidden
-		-o-backface-visibility: hidden
-		backface-visibility: hidden
-
-		-webkit-transition: 0.6s
-		-webkit-transform-style: preserve-3d
-
-		-moz-transition: 0.6s
-		-moz-transform-style: preserve-3d
-
-		-o-transition: 0.6s
-		-o-transform-style: preserve-3d
-
-		-ms-transition: 0.6s
-		-ms-transform-style: preserve-3d
 
 		transition: 0.6s
+		transform-style: preserve-3d
 
 		position: absolute
 		background: #fff
@@ -338,16 +316,8 @@ section.study
 		text-align: center
 	.front
 		z-index: 2
-		-webkit-transform: rotateY(0deg)
-		-moz-transform: rotateY(0deg)
-		-o-transform: rotateY(0deg)
-		-ms-transform: rotateY(0deg)
 		transform: rotateY(0deg)
 	.back
-		-webkit-transform: rotateY(-180deg)
-		-moz-transform: rotateY(-180deg)
-		-o-transform: rotateY(-180deg)
-		-ms-transform: rotateY(-180deg)
 		transform: rotateY(-180deg)
 	.content
 		position: absolute
@@ -356,5 +326,37 @@ section.study
 		right: 0
 		bottom: 0
 		margin: auto
+		padding: 24px
+
+.button-container
+	margin-top: 6px
+	a
+		color: #999
+		text-align: center
+		width: 33%
+		float: left
+		&:first-of-type
+			text-align: left
+			.fa
+				margin-left: 7px
+				color: $bright-green
+		&:last-of-type
+			text-align: right
+			.fa
+				margin-right: 11px
+				color: $bright-red
+		.fa
+			font-size: 24px
+		span
+			display: block
+			text-transform: uppercase
+			margin-top: 4px
+			font-size: 12px
+			letter-spacing: 1px
+
+.swipe-message
+	display: none
+.touch .swipe-message 
+	display: block
 
 @import responsive
