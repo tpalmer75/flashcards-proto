@@ -22,8 +22,32 @@ $(document).ready(function() {
 
 	// Function for swiping left
 	function swipe(swipe, direction, distance, duration, fingerCount) {
-		$(this).find('.card').toggleClass('flipped');
+		$(this).find('.card.current').toggleClass('flipped');
 	};
+
+	var rightWrong = $('.correct-button, .incorrect-button');
+
+	rightWrong.click(function() {
+		var status = $(this).data('status');
+
+
+		var currentCard = $('.card.current');
+		var cardNumber = currentCard.index();
+		var checkNextCard = currentCard.next('.card').index();
+
+		currentCard.hide().removeClass('current');
+		currentCard.next('.card').show().addClass('current');
+		if (status == 'correct') {
+			$('.meter > div:nth-of-type(' + cardNumber + ')').addClass('correct');
+		} else {
+			$('.meter > div:nth-of-type(' + cardNumber + ')').addClass('incorrect');
+		}
+		
+		if (checkNextCard == -1) {
+			$('.stats').fadeIn(300);
+			$('.button-container').fadeOut(300)
+		}
+	});
 
 
 });
