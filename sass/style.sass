@@ -7,7 +7,7 @@ $bright-blue: #3399FF
 $light-blue: #33adff // for hover
 $bright-green: #37af4e
 $bright-red: #f43900
-$font-stack: 'Roboto', 'Lucida Grande', 'Lucida Sans', sans-serif
+$font-stack: 'Lucida Grande', 'Lucida Sans', sans-serif
 
 $bp-desktop: 960px
 
@@ -179,10 +179,16 @@ section.preview
 		margin-bottom: 10px
 		color: $bright-blue
 		padding: 15px 0
-		width: 85px
+		max-width: 85px
+		width: 22.5%
+		margin-right: 10px
 		border-radius: 4px
 		border: 1px solid $bright-blue
 		transition: all .2s
+		&:last-of-type
+			margin-right: 0
+		@media (max-width: 600px)
+			margin-right: 3.33%
 		&:hover, &:active, &:focus
 			// Hmm, how should it hover?
 		.fa
@@ -200,10 +206,6 @@ section.preview
 			font-size: 12px
 			display: block
 			margin-top: 8px
-
-.flashcard-container
-	margin-top: 20px
-	margin-bottom: 20px
 
 .flashcard
 	background: white
@@ -250,12 +252,16 @@ section.preview
 		display: block
 		background: #e5e5e5
 .editor
-	.controls
-		display: inline-block
 	.new-card
 		position: absolute
 		right: 0
 		bottom: 0
+		margin: 24px 0
+		@media (max-width: 600px)
+			position: static
+			display: block
+			margin: 12px auto
+			width: 125px
 	footer .new-card
 		top: 0
 
@@ -334,6 +340,7 @@ section.study
 		vertical-align: middle
 		overflow: scroll
 		max-height: 100%
+		width: 99%
 
 .button-container
 	margin-top: 6px
@@ -383,5 +390,18 @@ section.study
 
 .stats
 	display: none
-
+	font-size: 21px
+	color: #999
+	line-height: 1.6
+	.third
+		width: 33%
+		float: left
+		font-size: 16px
+		margin-top: 24px
+		h3.percentage
+			font-size: 36px
+		span
+			display: block
+		.fa
+			font-size: 24px
 @import responsive

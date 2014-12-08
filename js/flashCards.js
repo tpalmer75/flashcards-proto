@@ -20,10 +20,13 @@ $(document).ready(function() {
 	// Swipe recognition with touchSwipe.js
 	container.swipe( { swipeLeft:swipe, swipeRight:swipe, allowPageScroll:"vertical" });
 
-	// Function for swiping left
+	// Function for swiping
 	function swipe(swipe, direction, distance, duration, fingerCount) {
 		$(this).find('.card.current').toggleClass('flipped');
 	};
+
+	// Create Card meter
+	
 
 	var rightWrong = $('.correct-button, .incorrect-button');
 
@@ -42,10 +45,24 @@ $(document).ready(function() {
 		} else {
 			$('.meter > div:nth-of-type(' + cardNumber + ')').addClass('incorrect');
 		}
+
 		
+		// If there are no more cards
 		if (checkNextCard == -1) {
+			// Set the number of right and wrong answers
+			var numberRight = $('.meter .correct').length;
+			var numberWrong = $('.meter .incorrect').length;
+
 			$('.stats').fadeIn(300);
 			$('.button-container').fadeOut(300)
+
+			$('.number-correct > span').text(numberRight);
+			$('.number-incorrect > span').text(numberWrong);
+
+			var percentage = Math.round(numberRight/(numberRight + numberWrong) * 100);
+
+			$('.stats .options .percentage').text(percentage + '%');
+
 		}
 	});
 

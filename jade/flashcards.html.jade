@@ -1,7 +1,7 @@
 doctype html
 head
 	link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet")
-	link(href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css')
+	//- link(href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css')
 	link(href="css/style.css" rel="stylesheet" type="text/css")
 html
 	body.modal
@@ -131,7 +131,21 @@ html
 								div
 									p Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.
 					.stats
-						h1 Hello World!
+						.number-correct You got 
+							span 
+							|  correct.
+						.number-incorrect You got 
+							span 
+							|  wrong.
+						.options.group
+							.third
+								h3.percentage
+							.third
+								i.fa.fa-refresh
+								span Try Again
+							.third
+								i.fa.fa-chart
+								span Review Incorrect
 					.button-container.cf
 						a.correct-button(href="#" data-status="correct")
 							i.fa.fa-check
@@ -146,7 +160,6 @@ html
 						i.fa.fa-arrow-left
 						|   Swipe to flip  
 						i.fa.fa-arrow-right
-
 		script(src="js/jquery-2.1.1.min.js")
 		script(src="js/jquery.touchSwipe.min.js")
 		script(src="js/flashCards.js")
