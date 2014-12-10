@@ -1,0 +1,327 @@
+extends index.html
+
+block header
+	section.search-bar(style="background: linear-gradient(to top, #e5e5e5, #ccc)")
+		.wrapper
+			table.search-container
+				tr
+					td.new-deck
+						a.blue-btn(href="")
+							i.fa.fa-plus
+							span  New Deck
+					td
+						form#search
+							//- .course-dd
+							//- 	span All Courses
+							//- 	i.fa.fa-caret-down
+							input(type="search" placeholder="Search for a deck...")
+							button.blue-btn(type="submit")
+								i.fa.fa-search
+block content
+	section.preview
+		.wrapper
+			header.cf
+				.deck-info
+					div
+						h3 AHTG 100
+						.rating
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star-half-full
+							i.fa.fa-star-o
+					h2 Midterm 1 Study Guide
+				.controls
+					a(href="flashcards.html").control-btn.fill(style="margin-left: 0")
+						i.fa.fa-copy
+						span CARDS
+					a(href="#").control-btn.fill(style="margin-left: 0")
+						i.fa.fa-line-chart 
+						span QUIZ
+					a(href="#").control-btn.blue.edit-mode
+						i.fa.fa-edit 
+						span EDIT
+					a(href="#").control-btn.blue
+						i.fa.fa-share 
+						span SHARE
+			div.flashcard-container
+				.flashcard.cf
+					.col.col-left
+						p Founding
+					.col.col-right
+						p A conscious, deliberate act of creating a system of government that benefits the people
+				.flashcard.cf
+					.col.col-left
+						p Patria
+					.col.col-right
+						p A sense of homeland
+				.flashcard.cf
+					.col.col-left
+						p Cleisthenes
+					.col.col-right
+						img(src="img/cliesthenes.jpg")
+						p An Athenian tyrant that sat down with the leading men of Athens and came up with a democracy
+				.flashcard.cf
+					.col.col-left
+						p Republic
+					.col.col-right
+						p From the latin "res publica" meaning "public thing", it is when the citizens of the political state govern themselves rather than submit to a monarch, despot, or oligarchy; freedom from domination of all sorts. Two brief (and unexplained) attempts at this in Renaissance Europe. Great Britain was sort of a republic, because of Parliament.
+				.flashcard.cf
+					.col.col-left
+						p Heritage
+					.col.col-right
+						p The traditions, beliefs, principles, events, etc. that we inherit (or choose to inherit) from the past.
+				.flashcard.cf
+					.col.col-left
+						p Sovereignty
+					.col.col-right
+						p Ultimate political power-having the final say. Government must have sovereignty to be effective whatsoever.
+				.flashcard.cf
+					.col.col-left
+						p Brown v Board of Education
+					.col.col-right
+						p Supreme Court desegregated schools. Governor of Arkansas sent the Arkansas National Guard to keep them out of the school, so Eisenhower sent a division of the Army to enforce the black student's attendance by any means necessary, and then nationalized the Arkansas National Guard to enforce the law through the school year. 
+				.flashcard.cf
+					.col.col-left
+						p Human Predicament
+					.col.col-right
+						p The cycle from tyranny to anarchy, to which sovereign power and its ill effects give rise.
+				.flashcard.cf
+					.col.col-left
+						p Despot
+					.col.col-right
+						p A ruler exercising absolute power.
+				.flashcard.cf
+					.col.col-left
+						p Revolution
+					.col.col-right
+						img(src="img/revolution.jpg")
+						p Right side of human predicament cycle; a means of removing tyranny from power.
+				.flashcard.cf
+					.col.col-left
+						p Tyranny
+					.col.col-right
+						p Top of human predicament cycle; absolute power centralized in one person or small group. Often preferable to anarchy. The rule of will.
+				.flashcard.cf
+					.col.col-left
+						p Anarchy
+					.col.col-right
+						p Bottom of human predicament cycle; no one person (or group) maintains absolute power. Characterized by ass disorder caused by failure to agree on a common course of action.
+				.flashcard.cf
+					.col.col-left
+						p Competing Groups
+					.col.col-right
+						p Left side of human predicament cycle; Groups that, in a state of anarchy, fight for supreme power and control, part of the human predicament cycle.
+				.flashcard.cf
+					.col.col-left
+						p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
+					.col.col-right
+						p Reasonably stable and prosperous society without an oppressive tyranny. Usually includes peace, respect, vibrant culture, and personal freedom to live the way one chooses. *It is a self-conscious attempt to avoid tyranny and anarchy- the good society doesn't happen by accident. It is a balance between liberty and order that benefits society as a whole.Offers human fulfillment aka "Goods of the Soul". Hinges on the tension between virtue and self-interest.*
+				.flashcard.cf
+					.col.col-left
+						p The Human Predicament Cycle
+					.col.col-right
+						p Tyranny -> Revolution -> Anarchy -> Competing Groups
+				.flashcard.cf
+					.col.col-left
+						p Plato
+						img(src="img/plato.jpg")
+					.col.col-right
+						p Greek Philosopher and author of The Republic, which extolled civic virtue and the necessity of arete.
+				.flashcard.cf
+					.col.col-left
+						p Political legitimacy
+					.col.col-right
+						p Ruling by a sanction higher than stark necessity; sanction may stem from divine rights, wisdom, or consent, etc.
+				.flashcard.cf
+					.col.col-left
+						p King James I
+					.col.col-right
+						p Claimed political legitimacy through the divine right of kings
+				.flashcard.cf
+					.col.col-left
+						p Theocracy
+					.col.col-right
+						p Divinely inspired rule, or rule by religion
+	section.editor
+		.wrapper
+			header.cf
+				.deck-info
+					div
+						select
+							option AHTG 100
+							option BIO 100
+							option ENG 101
+							option PSCI 100
+						.rating
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star-half-full
+							i.fa.fa-star-o
+					form 
+						input(placeholder="Enter deck title" value="Midterm 1 Study Guide")
+				.controls
+					a(href="#").control-btn.fill(style="margin-left: 0")
+						i.fa.fa-check
+						span SAVE
+					a(href="#").control-btn.edit-mode
+						i.fa.fa-close
+						span CANCEL
+					a(href="#").control-btn.red
+						i.fa.fa-trash
+						span DELETE
+				a#top-card.blue-btn.new-card(href="")
+					i.fa.fa-plus
+					span  New Card
+			div.flashcard-container
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Founding
+					.col.col-right
+						textarea A conscious, deliberate act of creating a system of government that benefits the people
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Patria
+					.col.col-right
+						textarea A sense of homeland
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Cleisthenes
+					.col.col-right
+						img(src="img/cliesthenes.jpg")
+						textarea An Athenian tyrant that sat down with the leading men of Athens and came up with a democracy
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Republic
+					.col.col-right
+						textarea From the latin "res publica" meaning "public thing", it is when the citizens of the political state govern themselves rather than submit to a monarch, despot, or oligarchy; freedom from domination of all sorts. Two brief (and unexplained) attempts at this in Renaissance Europe. Great Britain was sort of a republic, because of Parliament.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Heritage
+					.col.col-right
+						textarea The traditions, beliefs, principles, events, etc. that we inherit (or choose to inherit) from the past.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Sovereignty
+					.col.col-right
+						textarea Ultimate political power-having the final say. Government must have sovereignty to be effective whatsoever.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Brown v Board of Education
+					.col.col-right
+						textarea Supreme Court desegregated schools. Governor of Arkansas sent the Arkansas National Guard to keep them out of the school, so Eisenhower sent a division of the Army to enforce the black student's attendance by any means necessary, and then nationalized the Arkansas National Guard to enforce the law through the school year. 
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Human Predicament
+					.col.col-right
+						textarea The cycle from tyranny to anarchy, to which sovereign power and its ill effects give rise.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Despot
+					.col.col-right
+						textarea A ruler exercising absolute power.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Revolution
+					.col.col-right
+						img(src="img/revolution.jpg")
+						textarea Right side of human predicament cycle; a means of removing tyranny from power.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Tyranny
+					.col.col-right
+						textarea Totextarea of human predicament cycle; absolute power centralized in one person or small group. Often preferable to anarchy. The rule of will.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Anarchy
+					.col.col-right
+						textarea Bottom of human predicament cycle; no one person (or group) maintains absolute power. Characterized by ass disorder caused by failure to agree on a common course of action.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Competing Groups
+					.col.col-right
+						textarea Left side of human predicament cycle; Groups that, in a state of anarchy, fight for supreme power and control, part of the human predicament cycle.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Good Society
+					.col.col-right
+						textarea Reasonably stable and prosperous society without an oppressive tyranny. Usually includes peace, respect, vibrant culture, and personal freedom to live the way one chooses. *It is a self-conscious attempt to avoid tyranny and anarchy- the good society doesn't happen by accident. It is a balance between liberty and order that benefits society as a whole.Offers human fulfillment aka "Goods of the Soul". Hinges on the tension between virtue and self-interest.*
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea The Human Predicament Cycle
+					.col.col-right
+						textarea Tyranny -> Revolution -> Anarchy -> Competing Groups ->
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Plato
+						img(src="img/plato.jpg")
+					.col.col-right
+						textarea Greek Philosopher and author of The Republic, which extolled civic virtue and the necessity of arete.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Political legitimacy
+					.col.col-right
+						textarea Ruling by a sanction higher than stark necessity; sanction may stem from divine rights, wisdom, or consent, etc.
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea King James I
+					.col.col-right
+						textarea Claimed political legitimacy through the divine right of kings
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea Theocracy
+					.col.col-right
+						textarea Divinely inspired rule, or rule by religion
+			footer
+				a#bottom-card.blue-btn.new-card(href="")
+					i.fa.fa-plus
+					span  New Card
+				.controls
+					a(href="#").control-btn.fill(style="margin-left: 0")
+						i.fa.fa-check
+						span SAVE
+					a(href="#").control-btn.edit-mode
+						i.fa.fa-close
+						span CANCEL
+					a(href="#").control-btn.red
+						i.fa.fa-trash
+						span DELETE
