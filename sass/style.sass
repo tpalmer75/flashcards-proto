@@ -17,6 +17,7 @@ body
 	font-family: $font-stack
 	min-height: 100vh
 	color: #333
+	background: #e5e5e5
 
 p
 	line-height: 24px
@@ -48,7 +49,7 @@ input, textarea
 	box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1)
 
 .blue-btn
-	background: $bright-blue
+	background: linear-gradient(to top, $light-blue, $bright-blue)
 	font-size: 16px
 	height: 36px
 	appearance: none
@@ -59,6 +60,7 @@ input, textarea
 	color: #fff
 	font-size: 16px
 	border-radius: 6px
+	box-shadow: 0 2px 2px rgba(0,0,0,.1)
 	&:hover, &:active, &:focus
 		background: $light-blue
 
@@ -74,7 +76,7 @@ a.blue-btn
 	background: $blue
 	padding: 14px
 	border-bottom: 1px solid #002A53
-
+	box-shadow: 0 2px 2px rgba(0,0,0,.25)
 #logo
 	font-size: 24px
 	display: inline-block
@@ -106,13 +108,17 @@ a.blue-btn
 		width: 140px
 
 .search-bar
-	background-color: #ccc
+	background-color: #ddd
+	box-shadow: inset 0 0px 10px #ccc
+	&.home
+		box-shadow: none
 	form
 		background: white
 		border-radius: 6px
 		position: relative
 		overflow: hidden
 		height: 35px
+		box-shadow: 0 2px 2px rgba(0,0,0,.05)
 	// .course-dd
 	// 	display: inline-block
 	// 	padding: 10px 0 10px 20px
@@ -132,15 +138,13 @@ a.blue-btn
 		padding: 9px 30px
 		border-radius: 0
 		margin: 0
-		
-
+		top: 0
 	input 
 		appearance: none
 		-webkit-appearance: none
 		border: 0
-		position: relative
-		left: 10px
-		width: 75%
+		text-indent: 10px
+		width: 100%
 		outline: none
 		height: 35px
 		font-size: 16px
@@ -150,7 +154,24 @@ a.blue-btn
 // Home Page --------------------------------------------
 
 .my-decks, .my-classes
-	
+	display: inline-block
+	vertical-align: top
+	h2
+		margin-bottom: 24px
+
+.my-decks
+	width: 63%
+	margin-right: 6%
+	li
+		background: #fff
+		padding: 18px 12px
+		border-radius: 6px
+		border-bottom: 3px solid #ddd
+		margin-bottom: 12px
+.my-classes
+	width: 30%
+	h4
+		margin: 12px 0 36px
 
 // Deck Page Styles ------------------------------------------
 	
@@ -163,13 +184,14 @@ section.preview
 		display: inline-block
 	h2, input
 		font-size: 24px
-		margin-top: 20px
+		margin-top: 12px
 		line-height: 32px
 	h3
 		color: #999
+		font-size: 14px
 	.rating
 		display: inline-block
-		color: $bright-green
+		color: $bright-blue
 		margin-left: 20px
 	select
 		font-size: 16px
@@ -181,41 +203,66 @@ section.preview
 		font-family: $font-stack
 
 .controls
-	margin: 12px 0
+	margin: 12px 0 36px
+	background: #ddd
+	box-shadow: inset 0 0 10px #ccc
+	border-radius: 6px
+	padding: 12px
+	display: inline-block
+	@media (max-width: 600px)
+		display: block
 	.control-btn
 		display: inline-block
 		text-align: center
 		margin-right: 10px
-		margin-bottom: 10px
-		color: $bright-blue
+		color: #fff
 		padding: 15px 0
-		max-width: 85px
-		width: 22.5%
+		width: 85px
 		margin-right: 10px
 		border-radius: 4px
-		border: 1px solid $bright-blue
-		transition: all .2s
+		background: linear-gradient(to top, $light-blue, $bright-blue)
+		box-shadow: 0 3px 1px #ccc
 		&:last-of-type
 			margin-right: 0
 		@media (max-width: 600px)
 			margin-right: 3.33%
-		&:hover, &:active, &:focus
-			// Hmm, how should it hover?
+			width: 22.5%
+		&:hover
+			background: $light-blue
 		.fa
 			position: relative
 			bottom: 0
 			transition: bottom .2s
-		&.fill
-			background: $bright-blue
-			color: #fff
-		&.red:hover
-			background: $bright-red
-			color: #fff
-			border: 1px solid $bright-red
+		// &.red:hover
+		// 	color: $bright-red
+		// 	border: 1px solid $bright-red
 		span
 			font-size: 12px
 			display: block
 			margin-top: 8px
+	// .control-btn
+	// 	display: inline-block
+	// 	text-align: center
+	// 	color: #fff
+	// 	padding: 5px
+	// 	max-width: 85px
+	// 	color: #aaa
+	// 	width: 22.5%
+	// 	border-right: 1px solid #bcc
+	// 	letter-spacing: 1px
+	// 	&:last-of-type
+	// 		border: 0
+	// 	@media (max-width: 600px)
+	// 		margin-right: 3.33%
+	// 	.fa
+	// 		position: relative
+	// 		bottom: 0
+	// 		transition: bottom .2s
+	// 		color: $bright-blue
+	// 	span
+	// 		font-size: 12px
+	// 		display: block
+	// 		margin-top: 8px
 
 .flashcard
 	background: white
