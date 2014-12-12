@@ -135,7 +135,7 @@ a.blue-btn
 	button
 		position: absolute
 		right: 0
-		padding: 9px 30px
+		padding: 0 30px
 		border-radius: 0
 		margin: 0
 		top: 0
@@ -149,6 +149,7 @@ a.blue-btn
 		height: 35px
 		font-size: 16px
 		box-shadow: none
+
 
 
 // Home Page --------------------------------------------
@@ -179,7 +180,6 @@ section.preview
 	background: #e5e5e5
 
 .deck-info
-	margin-bottom: 20px
 	h2, h3
 		display: inline-block
 	h2, input
@@ -199,11 +199,13 @@ section.preview
 		margin-top: 14px
 		width: 100%
 		max-width: 400px
+		text-indent: 5px
+		border-radius: 4px
 	input, select
 		font-family: $font-stack
 
 .controls
-	margin: 12px 0 36px
+	margin: 24px 0
 	background: #ddd
 	box-shadow: inset 0 0 10px #ccc
 	border-radius: 6px
@@ -222,6 +224,9 @@ section.preview
 		border-radius: 4px
 		background: linear-gradient(to top, $light-blue, $bright-blue)
 		box-shadow: 0 3px 1px #ccc
+		position: relative
+		top: 0
+		transition: top .1s
 		&:last-of-type
 			margin-right: 0
 		@media (max-width: 600px)
@@ -229,10 +234,13 @@ section.preview
 			width: 22.5%
 		&:hover
 			background: $light-blue
+		&:active
+			top: 2px
 		.fa
 			position: relative
 			bottom: 0
 			transition: bottom .2s
+
 		// &.red:hover
 		// 	color: $bright-red
 		// 	border: 1px solid $bright-red
@@ -274,6 +282,7 @@ section.preview
 	position: relative
 	&:last-of-type
 		border: none
+		margin: 0
 	.col
 		width: 50%
 		float: left
@@ -294,7 +303,7 @@ section.preview
 		width: 24px
 		background: white
 		color: #999
-		box-shadow: 0 1px 2px #999
+		box-shadow: 0 0px 6px #ccc
 		text-align: center
 
 // Deck Edit Styles ------------------------------------------
@@ -312,7 +321,7 @@ section.preview
 	.new-card
 		position: absolute
 		right: 0
-		bottom: 0
+		bottom: 12px
 		margin: 24px 0
 		@media (max-width: 600px)
 			position: static
@@ -333,6 +342,8 @@ section.preview
 		position: relative
 		margin-top: -3px
 		margin-bottom: -6px
+		border-radius: 4px
+		box-shadow: inset 0 0 8px #eee
 
 // Deck Study Styles ----------------------------------------
 
@@ -401,20 +412,18 @@ section.study
 
 .button-container
 	margin-top: 6px
+	text-align: center
 	a
 		color: #999
 		text-align: center
-		width: 33%
-		float: left
+		display: inline-block
 		&:first-of-type
-			text-align: left
 			.fa
-				margin-left: 7px
 				color: $bright-green
+		&:nth-of-type(2)
+			margin: 0 16px
 		&:last-of-type
-			text-align: right
 			.fa
-				margin-right: 11px
 				color: $bright-red
 		.fa
 			font-size: 24px

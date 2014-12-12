@@ -14,8 +14,6 @@ $(document).ready(function() {
 		    });
 		});
 	});
-
-
 	
 	var cardOnTop = $('#top-card');
 	var cardOnBottom = $('#bottom-card');
@@ -47,7 +45,9 @@ $(document).ready(function() {
 		e.preventDefault();	
 
 		// Recognize the new close button
-		allowClose();	
+		allowClose();
+
+		$("html, body").scrollTop($(document).height());
 	});
 
 });
