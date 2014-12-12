@@ -1,0 +1,122 @@
+extends index.html
+block body
+	body.editing
+		header#main-header
+			.wrapper
+				a(href="/")
+					h1#logo
+						span(style="color: white;") BYU 
+						span(style="color: #3399FF;") Flashcards
+				#account
+					a.user(href="")
+						img(src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg")
+						span Jim Johnson
+					a.logout(href="")
+						span Log Out 
+						i.fa.fa-sign-out
+block header
+	section.search-bar
+		.wrapper
+			table.search-container
+				tr
+					td.new-deck
+						a.blue-btn(href="")
+							i.fa.fa-plus
+							span  New Deck
+					td
+						form#search
+							//- .course-dd
+							//- 	span All Courses
+							//- 	i.fa.fa-caret-down
+							input(type="search" placeholder="Search for a deck...")
+							button.blue-btn(type="submit")
+								i.fa.fa-search
+block content
+	section.editor
+		.wrapper
+			header.cf
+				.deck-info
+					div
+						select
+							option AHTG 100
+							option BIO 100
+							option ENG 101
+							option PSCI 100
+						.rating
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star
+							i.fa.fa-star-half-full
+							i.fa.fa-star-o
+					form 
+						input(placeholder="Enter deck title")
+				.controls
+					a(href="#").control-btn.fill(style="margin-left: 0")
+						i.fa.fa-check
+						span SAVE
+					a(href="#").control-btn.edit-mode
+						i.fa.fa-close
+						span CANCEL
+					a(href="#").control-btn.red
+						i.fa.fa-trash
+						span DELETE
+				a#top-card.blue-btn.new-card(href="")
+					i.fa.fa-plus
+					span  New Card
+			div.flashcard-container
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea
+					.col.col-right
+						textarea
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea
+					.col.col-right
+						textarea
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea
+					.col.col-right
+						textarea
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea
+					.col.col-right
+						textarea
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea
+					.col.col-right
+						textarea
+				.flashcard.cf
+					a(href="").close
+						i.fa.fa-close
+					.col.col-left
+						textarea
+					.col.col-right
+						textarea
+			footer
+				a#bottom-card.blue-btn.new-card(href="")
+					i.fa.fa-plus
+					span  New Card
+				.controls
+					a(href="#").control-btn.fill(style="margin-left: 0")
+						i.fa.fa-check
+						span SAVE
+					a(href="#").control-btn.edit-mode
+						i.fa.fa-close
+						span CANCEL
+					a(href="#").control-btn.red
+						i.fa.fa-trash
+						span DELETE

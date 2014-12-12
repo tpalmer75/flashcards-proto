@@ -4,93 +4,94 @@ head
 	//- link(href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css')
 	link(href="css/style.css" rel="stylesheet" type="text/css")
 html
-	body
-		header#main-header
+	block body
+		body
+			header#main-header
+				.wrapper
+					a(href="/")
+						h1#logo
+							span(style="color: white;") BYU 
+							span(style="color: #3399FF;") Flashcards
+					#account
+						a.user(href="")
+							img(src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg")
+							span Jim Johnson
+						a.logout(href="")
+							span Log Out 
+							i.fa.fa-sign-out
+	block header
+		section.search-bar.home(style="text-align: center; padding: 72px; background: linear-gradient(to top, #e5e5e5, #ccc)")
 			.wrapper
-				a(href="/")
-					h1#logo
-						span(style="color: white;") BYU 
-						span(style="color: #3399FF;") Flashcards
-				#account
-					a.user(href="")
-						img(src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg")
-						span Jim Johnson
-					a.logout(href="")
-						span Log Out 
-						i.fa.fa-sign-out
-		block header
-			section.search-bar.home(style="text-align: center; padding: 72px; background: linear-gradient(to top, #e5e5e5, #ccc)")
-				.wrapper
-					h2(style="color: #333") Find a deck and get started.
-					form#search(style="text-align: left; margin: 48px 0;")
-						//- .course-dd
-						//- 	span All Courses
-						//- 	i.fa.fa-caret-down
-						input(type="search" placeholder="Search for a deck...")
-						button.blue-btn(type="submit")
-							i.fa.fa-search
-					a.blue-btn(href="#" style="margin: 0 12px")
-						i.fa.fa-plus
-						span  New Deck
-					a.blue-btn(href="#" style="margin: 0 12px")
-						i.fa.fa-share
-						span  Import Deck
-		block content
-			section.preview.group
-				.wrapper
-					.my-decks
-						h2 My Decks
-						ul
-							li
-								table
-									td AHTG 100
-									td Midterm 1 Study Guide
-							li
-								table
-									td AHTG 100
-									td Midterm 1 Study Guide
-							li
-								table
-									td AHTG 100
-									td Midterm 1 Study Guide
-							li
-								table
-									td AHTG 100
-									td Midterm 1 Study Guide
-							li
-								table
-									td AHTG 100
-									td Midterm 1 Study Guide
-							li
-								table
-									td AHTG 100
-									td Midterm 1 Study Guide
-							li
-								table
-									td AHTG 100
-									td Midterm 1 Study Guide
-							li
-								table
-									td AHTG 100
-									td Midterm 1 Study Guide
-					.my-classes
-						h2 My Classes
-						ul
-							li
-								h3.class-name AHTG 100
-								h4.class-title American Heritage
-							li
-								h3.class-name AHTG 100
-								h4.class-title American Heritage
-							li
-								h3.class-name AHTG 100
-								h4.class-title American Heritage
-							li
-								h3.class-name AHTG 100
-								h4.class-title American Heritage
-							li
-								h3.class-name AHTG 100
-								h4.class-title American Heritage
-		block scripts		
-			script(src="js/jquery-2.1.1.min.js")
-			script(src="js/main.js")
+				h2(style="color: #333") Find a deck and get started.
+				form#search(style="text-align: left; margin: 48px 0;")
+					//- .course-dd
+					//- 	span All Courses
+					//- 	i.fa.fa-caret-down
+					input(type="search" placeholder="Search for a deck...")
+					button.blue-btn(type="submit")
+						i.fa.fa-search
+				a.blue-btn(href="new-deck.html" style="margin: 0 12px")
+					i.fa.fa-plus
+					span  New Deck
+				a.blue-btn(href="#" style="margin: 0 12px")
+					i.fa.fa-share
+					span  Import Deck
+	block content
+		section.preview.group
+			.wrapper
+				.my-decks
+					h2 My Decks
+					ul
+						li
+							table
+								td AHTG 100
+								td Midterm 1 Study Guide
+						li
+							table
+								td BIO 100
+								td Principles of Biology
+						li
+							table
+								td ENG 115
+								td College Writing and Reading
+						li
+							table
+								td PSYCH 101
+								td Orientation to the 
+						li
+							table
+								td AHTG 100
+								td Midterm 1 Study Guide
+						li
+							table
+								td AHTG 100
+								td Midterm 1 Study Guide
+						li
+							table
+								td AHTG 100
+								td Midterm 1 Study Guide
+						li
+							table
+								td AHTG 100
+								td Midterm 1 Study Guide
+				.my-classes
+					h2 My Classes
+					ul
+						li
+							h3.class-name AHTG 100
+							h4.class-title American Heritage
+						li
+							h3.class-name BIO 100
+							h4.class-title Principles of Biology
+						li
+							h3.class-name ENG 115
+							h4.class-title College Writing and Reading
+						li
+							h3.class-name PSYCH 101
+							h4.class-title Orientation to the  Major
+						li
+							h3.class-name REL A 121
+							h4.class-title The Book of Mormon
+	block scripts		
+		script(src="js/jquery-2.1.1.min.js")
+		script(src="js/main.js")
