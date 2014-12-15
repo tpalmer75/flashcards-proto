@@ -1,0 +1,94 @@
+extends index.html
+block body
+	body
+		header#main-header
+			.wrapper
+				a(href="/")
+					h1#logo
+						span(style="color: white;") BYU 
+						span(style="color: #3399FF;") Flashcards
+				#account
+					a.user(href="")
+						img(src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg")
+						span Jim Johnson
+					a.logout(href="")
+						span Log Out 
+						i.fa.fa-sign-out
+block header
+	section.search-bar
+		.wrapper
+			table.search-container
+				tr
+					td.new-deck
+						a.blue-btn(href="")
+							i.fa.fa-plus
+							span  New Deck
+					td
+						form#search
+							//- .course-dd
+							//- 	span All Courses
+							//- 	i.fa.fa-caret-down
+							input(type="search" placeholder="Search for a deck...")
+							button.blue-btn(type="submit")
+								i.fa.fa-search
+block content
+	section.preview
+		.wrapper
+			header
+				.deck-info
+					div
+						h3 AHTG 100
+					h2 American Heritage
+			.decks
+				h2 My Decks
+				ul
+					li
+						table
+							td
+								i.fa-file-text-o.fa
+							td.class-name 
+								a(href="class-list.html") AHTG 100
+							td 
+								a(href="deck.html") Midterm 1 Study Guide
+					li
+						table
+							td
+								i.fa-file-text-o.fa
+							td.class-name BIO 100
+							td Principles of Biology
+					li
+						table
+							td
+								i.fa-file-text-o.fa
+							td.class-name ENG 115
+							td College Writing and Reading
+					li
+						table
+							td
+								i.fa-file-text-o.fa
+							td.class-name PSYCH 101
+							td Orientation to the 
+					li
+						table
+							td
+								i.fa-file-text-o.fa
+							td.class-name AHTG 100
+							td Midterm 1 Study Guide
+					li
+						table
+							td
+								i.fa-file-text-o.fa
+							td.class-name AHTG 100
+							td Midterm 1 Study Guide
+					li
+						table
+							td
+								i.fa-file-text-o.fa
+							td.class-name AHTG 100
+							td Midterm 1 Study Guide
+					li
+						table
+							td
+								i.fa-file-text-o.fa
+							td.class-name AHTG 100
+							td Midterm 1 Study Guide

@@ -12,17 +12,31 @@
       </div>
     </header>
   </body>
-  <section style="text-align: center; padding: 72px; background: linear-gradient(to top, #e5e5e5, #ccc)" class="search-bar home">
+  <section class="search-bar">
     <div class="wrapper">
-      <h2 style="color: #333">Find a deck and get started.</h2>
-      <form id="search" style="text-align: left; margin: 48px 0;">
-        <input type="search" placeholder="Search for a deck...">
-        <button type="submit" class="blue-btn"><i class="fa fa-search"></i></button>
-      </form><a href="new-deck.html" style="margin: 0 12px" class="blue-btn"><i class="fa fa-plus"></i><span> New Deck</span></a><a href="#" style="margin: 0 12px" class="blue-btn"><i class="fa fa-share"></i><span> Import Deck</span></a>
+      <table class="search-container">
+        <tr>
+          <td class="new-deck"><a href="" class="blue-btn"><i class="fa fa-plus"></i><span> New Deck</span></a></td>
+          <td>
+            <form id="search">
+              <input type="search" placeholder="Search for a deck...">
+              <button type="submit" class="blue-btn"><i class="fa fa-search"></i></button>
+            </form>
+          </td>
+        </tr>
+      </table>
     </div>
   </section>
-  <section class="preview group">
+  <section class="preview">
     <div class="wrapper">
+      <header>
+        <div class="deck-info">
+          <div>
+            <h3>AHTG 100</h3>
+          </div>
+          <h2>American Heritage</h2>
+        </div>
+      </header>
       <div class="decks">
         <h2>My Decks</h2>
         <ul>
@@ -81,31 +95,6 @@
               <td class="class-name">AHTG 100</td>
               <td>Midterm 1 Study Guide</td>
             </table>
-          </li>
-        </ul>
-      </div>
-      <div class="my-classes">
-        <h2>My Classes</h2>
-        <ul>
-          <li>
-            <h3 class="class-name">AHTG 100</h3>
-            <h4 class="class-title">American Heritage</h4>
-          </li>
-          <li>
-            <h3 class="class-name">BIO 100</h3>
-            <h4 class="class-title">Principles of Biology</h4>
-          </li>
-          <li>
-            <h3 class="class-name">ENG 115</h3>
-            <h4 class="class-title">College Writing and Reading</h4>
-          </li>
-          <li>
-            <h3 class="class-name">PSYCH 101</h3>
-            <h4 class="class-title">Orientation to the  Major</h4>
-          </li>
-          <li>
-            <h3 class="class-name">REL A 121</h3>
-            <h4 class="class-title">The Book of Mormon</h4>
           </li>
         </ul>
       </div>

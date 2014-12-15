@@ -5,8 +5,10 @@
 $blue: #003366
 $bright-blue: #3399FF
 $light-blue: #33adff // for hover
-$bright-green: #37af4e
-$bright-red: #f43900
+$bright-green: rgb(48, 187, 166)
+$light-green: rgb(53, 197, 175)
+$bright-red: #E86052
+$light-red: #F46658
 $font-stack: 'Lucida Grande', 'Lucida Sans', sans-serif
 
 $bp-desktop: 960px
@@ -18,6 +20,9 @@ body
 	min-height: 100vh
 	color: #333
 	background: #e5e5e5
+
+h1, h2, h3, h4, h5, h6
+	line-height: 1.6
 
 p
 	line-height: 24px
@@ -80,6 +85,7 @@ a.blue-btn
 #logo
 	font-size: 24px
 	display: inline-block
+	line-height: 1
 
 #account
 	position: absolute
@@ -154,25 +160,30 @@ a.blue-btn
 
 // Home Page --------------------------------------------
 
-.my-decks, .my-classes
+.decks, .my-classes
 	display: inline-block
 	vertical-align: top
 	h2
 		margin-bottom: 24px
 
-.my-decks
+.decks
 	width: 63%
 	margin-right: 6%
 	li
 		background: #fff
-		padding: 18px 12px
+		padding: 18px
 		border-radius: 6px
 		border-bottom: 3px solid #ddd
 		margin-bottom: 12px
+		.fa
+			margin-right: 12px
+			color: #999
+		.class-name
+			width: 110px
 .my-classes
 	width: 30%
 	h4
-		margin: 6px 0 33px
+		margin: 0 0 28px
 	h3
 		color: $bright-blue
 
@@ -189,6 +200,9 @@ section.preview
 		margin-top: 12px
 		line-height: 32px
 		font-weight: normal
+		@media (max-width: 600px)
+			font-size: 20px
+			line-height: 24px
 	h3
 		color: #999
 		font-size: 14px
@@ -196,8 +210,6 @@ section.preview
 		display: inline-block
 		color: $bright-blue
 		margin-left: 20px
-	select
-		font-size: 16px
 	input
 		margin-top: 14px
 		width: 100%
@@ -207,14 +219,12 @@ section.preview
 		box-shadow: inset 0 0 5px #eee
 	input, select
 		font-family: $font-stack
+	select
+		width: 124px
 
 .controls
-	margin: 24px 0
-	// box-shadow: inset 0 0 10px #ccc
-	// background: #ddd
+	margin: 8px 0 4px
 	border-top: 1px solid #ccc
-	border-bottom: 1px solid #ccc
-	// border-radius: 6px
 	padding: 12px 0
 	display: block
 	@media (max-width: 600px)
@@ -235,54 +245,32 @@ section.preview
 		transition: top .1s
 		&:last-of-type
 			margin-right: 0
-		@media (max-width: 600px)
-			margin-right: 3.33%
-			width: 22.5%
+		@media (max-width: 500px)
+			margin-right: 2%
+			width: 23.5%
 		&:hover
 			background: $light-blue
 		&:active
 			top: 2px
-		&.fill
-			background: $bright-green
-			width: 96px
+		&.long
+			@media (min-width: 501px)
+				width: 96px
+		&.green
+			background: linear-gradient(to top, $light-green, $bright-green)
+			&:hover
+				background: $light-green
+		&.red
+			background: linear-gradient(to top, $light-red, $bright-red)
+			&:hover
+				background: $light-red
 		.fa
 			position: relative
 			bottom: 0
 			transition: bottom .2s
-
-		// &.red:hover
-		// 	color: $bright-red
-		// 	border: 1px solid $bright-red
 		span
 			font-size: 12px
 			display: block
 			margin-top: 8px
-	// padding: 6px
-	// .control-btn
-	// 	display: inline-block
-	// 	text-align: center
-	// 	color: #fff
-	// 	padding: 5px 12px
-	// 	width: 85px
-	// 	color: #aaa
-	// 	border-right: 1px solid #CBCBCB
-	// 	letter-spacing: 1px
-	// 	&:hover
-	// 		color: #fff
-	// 	&:last-of-type
-	// 		border: 0
-	// 	@media (max-width: 600px)
-	// 		margin-right: 3.33%
-	// 		width: 22.5%
-	// 	.fa
-	// 		position: relative
-	// 		bottom: 0
-	// 		transition: bottom .2s
-	// 		color: $bright-blue
-	// 	span
-	// 		font-size: 12px
-	// 		display: block
-	// 		margin-top: 8px
 
 .flashcard
 	background: white
@@ -292,9 +280,6 @@ section.preview
 	border-bottom: 3px solid #ddd
 	line-height: 24px
 	position: relative
-	&:last-of-type
-		border: none
-		margin: 0
 	.col
 		width: 50%
 		float: left
@@ -331,17 +316,30 @@ section.preview
 		background: #e5e5e5
 .editor
 	.new-card
-		position: absolute
-		right: 0
-		bottom: 12px
-		margin: 24px 0
-		@media (max-width: 600px)
-			position: static
-			display: block
-			margin: 12px auto
-			width: 125px
-	footer .new-card
-		top: 0
+		// position: absolute
+		// right: 0
+		// bottom: 12px
+		// @media (max-width: 600px)
+		// 	position: static
+		// 	display: block
+		// 	margin: 12px auto
+		// 	width: 125px
+		display: block
+		border: 2px dashed #ccc
+		color: #999
+		text-align: center
+		border-radius: 6px
+		padding: 24px 0
+		margin-bottom: 12px
+		transition: color .2s
+		@media (max-width: 500px)
+			padding: 12px
+		&:hover
+			color: $bright-blue
+	footer 
+		.controls
+			border: 0
+			padding-top: 0
 
 .flashcard
 	textarea

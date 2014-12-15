@@ -6,7 +6,7 @@ block header
 			table.search-container
 				tr
 					td.new-deck
-						a.blue-btn(href="")
+						a.blue-btn(href="new-deck.html")
 							i.fa.fa-plus
 							span  New Deck
 					td
@@ -32,10 +32,10 @@ block content
 							i.fa.fa-star-o
 					h2 Midterm 1 Study Guide
 				.controls
-					a.control-btn.fill(href="flashcards.html" style="margin-left: 0")
+					a.control-btn.red.long(href="flashcards.html" style="margin-left: 0")
 						i.fa.fa-copy
 						span PRACTICE
-					a.control-btn.fill(href="#" style="margin-left: 0")
+					a.control-btn.green.long(href="#" style="margin-left: 0")
 						i.fa.fa-line-chart 
 						span QUIZ
 					a(href="#").control-btn.blue.edit-mode
@@ -162,16 +162,16 @@ block content
 					form 
 						input(placeholder="Enter deck title" value="Midterm 1 Study Guide")
 				.controls
-					a.control-btn.fill(href="#" style="margin-left: 0")
+					a.control-btn.green.long(href="#" style="margin-left: 0")
 						i.fa.fa-check
 						span SAVE
 					a(href="#").control-btn.edit-mode
 						i.fa.fa-close
 						span CANCEL
-					a(href="#").control-btn.red
+					a(href="#").control-btn
 						i.fa.fa-trash
 						span DELETE
-				a#top-card.blue-btn.new-card(href="")
+				a#top-card.new-card(href="")
 					i.fa.fa-plus
 					span  New Card
 			div.flashcard-container
@@ -312,16 +312,16 @@ block content
 					.col.col-right
 						textarea Divinely inspired rule, or rule by religion
 			footer
-				a#bottom-card.blue-btn.new-card(href="")
+				a#bottom-card.new-card(href="")
 					i.fa.fa-plus
 					span  New Card
 				.controls
-					a.control-btn.fill(href="#" style="margin-left: 0")
+					a.control-btn.green.long(href="#" style="margin-left: 0")
 						i.fa.fa-check
 						span SAVE
 					a(href="#").control-btn.edit-mode
 						i.fa.fa-close
 						span CANCEL
-					a(href="#").control-btn.red
+					a(href="#").control-btn
 						i.fa.fa-trash
 						span DELETE
